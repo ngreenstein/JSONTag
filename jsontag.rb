@@ -7,11 +7,18 @@ require 'rubygems'
 require 'taglib'
 require 'json'
 
+#Get file paths from user
+puts "Location of JSON file to read from: "
+json_path = gets.chomp
+puts "Location of audio file to save to: "
+audio_path = gets.chomp
+
+
 #Load attributes from file
-attributes = JSON.parse( File.open('sample.json').read )
+attributes = JSON.parse( File.open(json_path).read )
 
 #Open file
-TagLib::MPEG::File.open("sample copy.mp3") do |file|
+TagLib::MPEG::File.open(audio_path) do |file|
 	tag = file.id3v2_tag(true)
 
 	# Set attributes
