@@ -7,11 +7,16 @@ require 'rubygems'
 require 'taglib'
 require 'json'
 
-#Get file paths from user
-puts "Location of JSON file to read from: "
-json_path = gets.chomp
-puts "Location of audio file to save to: "
-audio_path = gets.chomp
+#If paths were specified as command line arguments, use those. Otherwise, get them from the user.
+if ARGV[0] && ARGV[1]
+	json_path  = ARGV[0]
+	audio_path = ARGV[1]
+else
+	puts "Location of JSON file to read from: "
+	json_path = gets.chomp
+	puts "Location of audio file to save to: "
+	audio_path = gets.chomp
+end
 
 
 #Load attributes from file
