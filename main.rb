@@ -1,29 +1,26 @@
 ### Depends on: ###
 #    taglib:			http://developer.kde.org/~wheeler/taglib.html `brew install taglib`
 #    taglib-ruby: http://robinst.github.com/taglib-ruby/				`gem install taglib-ruby`
+#    json:				http://flori.github.com/json/									`get install json`
 
 require 'rubygems'
 require 'taglib'
+require 'json'
 
-#Define attributes
-title = "Track Name Goes Here"
-artist = "Artist Goes Here"
-album = "Album Goes Here"
-year = 2012
-track_number = 1
-genre = "Genre Goes Here"
+#Load attributes from file
+attributes = JSON.parse( File.open('sample.json').read )
 
 #Open file
-TagLib::MPEG::File.open("sample.mp3") do |file|
+TagLib::MPEG::File.open("sample copy.mp3") do |file|
 	tag = file.id3v2_tag(true)
 
 	# Set attributes
-	 tag.title = title
-	tag.artist = artist
-	 tag.album = album
-	  tag.year = year
-	 tag.track = track_number
-	 tag.genre = genre
+	 tag.title = attributes['title']
+	tag.artist = attributes['artist']
+	 tag.album = attributes['album']
+	  tag.year = attributes['year']
+	 tag.track = attributes['track_number']
+	 tag.genre = attributes['genre']
 	 
 	 #Add artwork
 	 artframe = TagLib::ID3v2::AttachedPictureFrame.new
