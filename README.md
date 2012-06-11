@@ -12,6 +12,14 @@ Writes properties from a given JSON file into the ID3 tags of a given audio file
 * Genre (string)
 * Artwork (string) (path to PNG file)
 
+##Depenencies
+* **[taglib](http://developer.kde.org/~wheeler/taglib.html)**    
+`brew install taglib`
+* **[taglib-ruby](http://robinst.github.com/taglib-ruby/)**   
+`gem install taglib-ruby`
+* **[json](http://flori.github.com/json/)**  
+`gem install json`
+
 ##Usage
 	$ ruby jsontag.rb
 	> Location of JSON file to read from:

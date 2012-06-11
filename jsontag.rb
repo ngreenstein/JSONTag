@@ -1,7 +1,7 @@
 ### Depends on: ###
 #    taglib:			http://developer.kde.org/~wheeler/taglib.html `brew install taglib`
 #    taglib-ruby: http://robinst.github.com/taglib-ruby/				`gem install taglib-ruby`
-#    json:				http://flori.github.com/json/									`get install json`
+#    json:				http://flori.github.com/json/									`gem install json`
 
 require 'rubygems'
 require 'taglib'
