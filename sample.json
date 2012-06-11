@@ -4,5 +4,6 @@
 	"album": "Some Album",
 	"year": 2012,
 	"track_number": 1,
-	"genre": "Some Genre"
+	"genre": "Some Genre",
+	"artwork": "sample.png"
 }
