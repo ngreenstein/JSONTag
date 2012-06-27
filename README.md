@@ -24,7 +24,7 @@ Writes properties from a given JSON file into the ID3 tags of a given audio file
 
 ###Command-line arguments:
 	$ ruby jsontag.rb jsonfile.json audiofile.mp3
-###Interactice:
+###Interactive:
 	$ ruby jsontag.rb
 	> Location of JSON file to read from:
 	-> sample.json
