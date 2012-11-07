@@ -36,6 +36,8 @@ TagLib::MPEG::File.open(audio_path) do |file|
 	 
 	 #Add artwork
 	 if attributes['artwork']
+		 #Remove existing artwork
+		 tag.remove_frames('APIC')
 		 artframe = TagLib::ID3v2::AttachedPictureFrame.new
 		 artframe.mime_type = "image/png"
 		 artframe.description = "Cover"
