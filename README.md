@@ -1,9 +1,9 @@
-#JSONTag
+# JSONTag
 
-##Description
+## Description
 Writes properties from a given JSON file into the ID3 tags of a given audio file
 
-##Supported Properties
+## Supported Properties
 * Title (string)
 * Artist (string)
 * Album (string)
@@ -12,7 +12,7 @@ Writes properties from a given JSON file into the ID3 tags of a given audio file
 * Genre (string)
 * Artwork (string) (path to PNG file)
 
-##Depenencies
+## Depenencies
 * **[taglib](http://developer.kde.org/~wheeler/taglib.html)**    
 `brew install taglib`
 * **[taglib-ruby](http://robinst.github.com/taglib-ruby/)**   
@@ -20,11 +20,11 @@ Writes properties from a given JSON file into the ID3 tags of a given audio file
 * **[json](http://flori.github.com/json/)**  
 `gem install json`
 
-##Usage
+## Usage
 
-###Command-line arguments:
+### Command-line arguments:
 	$ ruby jsontag.rb jsonfile.json audiofile.mp3
-###Interactive:
+### Interactive:
 	$ ruby jsontag.rb
 	> Location of JSON file to read from:
 	-> sample.json
